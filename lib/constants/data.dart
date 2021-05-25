@@ -1,5 +1,5 @@
 class Data {
-  final _data = [
+  static final _data = [
     {
       "title": "Master your passwords",
       "image": "assets/image-of-your-choice.jpg",
@@ -65,5 +65,5 @@ class Data {
     },
   ];
 
-  get data => _data;
+  static get data => _data;
 }

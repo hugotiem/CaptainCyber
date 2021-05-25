@@ -1,6 +1,7 @@
 import 'package:captain_cyber/constants/cyber_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:captain_cyber/home/home_page.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,10 +17,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        // fontFamily: ,
+        textTheme: GoogleFonts.latoTextTheme(
+          Theme.of(context).textTheme,
+        ),
         primaryColor: CyberColors.darkBlue,
       ),
-      home: const HomePage(title: 'Activities'),
+      home: HomePage(title: 'Activities'),
     );
   }
 }
