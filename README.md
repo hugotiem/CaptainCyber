@@ -1,6 +1,11 @@
 # captain_cyber
 
-A new Flutter project.
+Le but de cette application est d'afficher la liste des activités de CaptainCyber.
+
+# Sommaire
+
+1. [Getting Started](#getting-started)
+2. [Objectifs](#objectifs)
 
 ## Getting Started
 
@@ -14,3 +19,10 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+## Objectifs
+
+- Créer un projet Flutter
+- Afficher la liste des activités
+- Les éléments de la liste doivent être groupés par type
+- Représenter le plus fidèlement possible la maquette
