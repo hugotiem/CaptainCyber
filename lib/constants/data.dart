@@ -1,17 +1,8 @@
 class Data {
-  static final _data = [
+  static final List<Map<String, Object>> _data = [
     {
       "title": "Master your passwords",
-      "image": "assets/image-of-your-choice.jpg",
-      "type": "Training",
-      "tags": "Identification / Digital identity",
-      'points': 35,
-      "duration": "15min",
-      "modulesCompleted": 2 / 3,
-    },
-    {
-      "title": "Master your passwords",
-      "image": "assets/image-of-your-choice.jpg",
+      "image": "assets/illustration_1.jpg",
       "type": "Training",
       "tags": "Identification / Digital identity",
       'points': 35,
@@ -20,7 +11,7 @@ class Data {
     },
     {
       "title": "Protect personal data",
-      "image": "assets/image-of-your-choice.jpg",
+      "image": "assets/illustration_1.jpg",
       "type": "Training",
       "tags": "Protection / Gdpr",
       'points': 35,
@@ -29,7 +20,7 @@ class Data {
     },
     {
       "title": "Harden your social profiles",
-      "image": "assets/image-of-your-choice.jpg",
+      "image": "assets/illustration_1.jpg",
       "type": "Checkup",
       "tags": "Social network / Privacy",
       'points': 10,
@@ -38,7 +29,7 @@ class Data {
     },
     {
       "title": "Do your part against ransomwares",
-      "image": "assets/image-of-your-choice.jpg",
+      "image": "assets/illustration_1.jpg",
       "type": "Checkup",
       "tags": "Social engineering / Phishing / Vishing",
       'points': 10,
@@ -47,7 +38,7 @@ class Data {
     },
     {
       "title": "Software updates and installs at home",
-      "image": "assets/image-of-your-choice.jpg",
+      "image": "assets/illustration_1.jpg",
       "type": "Quiz",
       "tags": "Update / Software",
       'points': 15,
@@ -56,7 +47,7 @@ class Data {
     },
     {
       "title": "Protect your browser at home",
-      "image": "assets/image-of-your-choice.jpg",
+      "image": "assets/illustration_1.jpg",
       "type": "Quiz",
       "tags": "Protection / Update",
       'points': 15,
