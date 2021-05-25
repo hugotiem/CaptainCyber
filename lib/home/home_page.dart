@@ -39,6 +39,10 @@ class HomePage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: childrenBuilder("Training"),
               ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: childrenBuilder("Checkup"),
+              )
             ],
           ),
         ),
@@ -51,7 +55,7 @@ class HomePage extends StatelessWidget {
     children.add(Container(
       margin: const EdgeInsets.only(top: 20, bottom: 10),
       child: Text(
-        type.toUpperCase(),
+        (type + "s").toUpperCase(),
         style: const TextStyle(fontWeight: FontWeight.w800),
       ),
     ));
