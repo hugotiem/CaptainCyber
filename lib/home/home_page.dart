@@ -21,17 +21,17 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-          width: _size.width,
-          decoration: const BoxDecoration(
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(36),
-              topRight: Radius.circular(36),
-            ),
-            color: Colors.white,
+      body: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        width: _size.width,
+        decoration: const BoxDecoration(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(36),
+            topRight: Radius.circular(36),
           ),
+          color: Colors.white,
+        ),
+        child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -42,6 +42,10 @@ class HomePage extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: childrenBuilder("Checkup"),
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: childrenBuilder("Quiz"),
               )
             ],
           ),
