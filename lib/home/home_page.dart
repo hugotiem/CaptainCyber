@@ -7,7 +7,7 @@ class HomePage extends StatelessWidget {
   final String title;
 
   HomePage({Key? key, required this.title}) : super(key: key);
-  @override
+
   final List<Map<String, Object>> data = Data.data;
 
   @override
@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           width: _size.width,
           decoration: const BoxDecoration(
             borderRadius: BorderRadius.only(

@@ -10,8 +10,9 @@ class AcitivitesList extends StatelessWidget {
   Widget build(BuildContext context) {
     // print(data["tags"].toString().split("/")[0]);
     return Container(
+      clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
-        border: Border.all(color: CyberColors.whiteGrey),
+        border: Border.all(color: CyberColors.grey.withOpacity(0.2)),
         borderRadius: const BorderRadius.all(Radius.circular(5)),
       ),
       padding: const EdgeInsets.all(10),
@@ -21,9 +22,10 @@ class AcitivitesList extends StatelessWidget {
           Expanded(
             flex: 1,
             child: Container(
-              height: 100,
+              height: 120,
+              width: 120,
               decoration: BoxDecoration(
-                border: Border.all(color: CyberColors.whiteGrey),
+                border: Border.all(color: CyberColors.grey.withOpacity(0.2)),
                 borderRadius: const BorderRadius.all(Radius.circular(5)),
               ),
               child: Image(
@@ -35,6 +37,7 @@ class AcitivitesList extends StatelessWidget {
           Expanded(
             flex: 2,
             child: Container(
+              margin: const EdgeInsets.all(10),
               child: Column(
                 children: <Widget>[
                   Container(
@@ -42,12 +45,58 @@ class AcitivitesList extends StatelessWidget {
                       children: <Widget>[
                         Text(
                           data["tags"].toString().split("/")[0].toUpperCase(),
-                          style: const TextStyle(fontWeight: FontWeight.w800),
+                          style: const TextStyle(
+                            fontWeight: FontWeight.w800,
+                            fontSize: 12,
+                            color: CyberColors.grey,
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 20,
                         ),
                         Text(
                           data["tags"].toString().split("/")[1].toUpperCase(),
-                          style: const TextStyle(fontWeight: FontWeight.w800),
+                          style: const TextStyle(
+                            fontWeight: FontWeight.w800,
+                            fontSize: 12,
+                            color: CyberColors.grey,
+                          ),
                         )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    child: Text(
+                      data["title"].toString(),
+                      style: const TextStyle(
+                        fontWeight: FontWeight.w800,
+                        fontSize: 20,
+                        color: CyberColors.darkBlue,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    child: Row(
+                      children: <Widget>[
+                        const Icon(
+                          Icons.timer,
+                          color: CyberColors.grey,
+                        ),
+                        Text(
+                          data["duration"].toString(),
+                          style: const TextStyle(color: CyberColors.grey),
+                        ),
+                        const SizedBox(
+                          width: 20,
+                        ),
+                        const Icon(
+                          Icons.star_border_outlined,
+                          color: CyberColors.yellow,
+                        ),
+                        Text(
+                          data["points"].toString() + "pts",
+                          style: const TextStyle(color: CyberColors.yellow),
+                        ),
                       ],
                     ),
                   ),
