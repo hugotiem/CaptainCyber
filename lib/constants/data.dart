@@ -11,7 +11,7 @@ class Data {
     },
     {
       "title": "Protect personal data",
-      "image": "assets/illustration_1.jpeg",
+      "image": "assets/illustration_2.jpeg",
       "type": "Training",
       "tags": "Protection/Gdpr",
       'points': 35,
@@ -29,7 +29,7 @@ class Data {
     },
     {
       "title": "Do your part against ransomwares",
-      "image": "assets/illustration_1.jpeg",
+      "image": "assets/illustration_2.jpeg",
       "type": "Checkup",
       "tags": "Social engineering / Phishing / Vishing",
       'points': 10,
@@ -38,7 +38,7 @@ class Data {
     },
     {
       "title": "Software updates and installs at home",
-      "image": "assets/illustration_1.jpg",
+      "image": "assets/illustration_1.jpeg",
       "type": "Quiz",
       "tags": "Update / Software",
       'points': 15,
@@ -47,7 +47,7 @@ class Data {
     },
     {
       "title": "Protect your browser at home",
-      "image": "assets/illustration_1.jpg",
+      "image": "assets/illustration_2.jpeg",
       "type": "Quiz",
       "tags": "Protection / Update",
       'points': 15,
