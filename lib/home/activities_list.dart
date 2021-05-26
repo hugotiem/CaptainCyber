@@ -98,15 +98,16 @@ class AcitivitesList extends StatelessWidget {
                         child: Text(modulesCompleted),
                       ),
                       Expanded(
-                          flex: 6,
-                          child: LinearPercentIndicator(
-                            lineHeight: 6,
-                            percent: percent,
-                            progressColor: percent == 1
-                                ? CyberColors.green
-                                : CyberColors.darkBlue,
-                            backgroundColor: CyberColors.whiteGrey,
-                          )),
+                        flex: 6,
+                        child: LinearPercentIndicator(
+                          lineHeight: 6,
+                          percent: percent,
+                          progressColor: percent == 1
+                              ? CyberColors.green
+                              : CyberColors.darkBlue,
+                          backgroundColor: CyberColors.whiteGrey,
+                        ),
+                      ),
                     ],
                   ),
                 ],
