@@ -49,40 +49,20 @@ class AcitivitesList extends StatelessWidget {
               width: double.infinity,
               margin: const EdgeInsets.all(10),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Container(
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
                     child: Row(
-                      children: <Widget>[
-                        Text(
-                          tags.split("/")[0].toUpperCase(),
-                          style: const TextStyle(
-                            fontWeight: FontWeight.w800,
-                            fontSize: 12,
-                            color: CyberColors.grey,
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 20,
-                        ),
-                        Text(
-                          tags.split("/")[1].toUpperCase(),
-                          style: const TextStyle(
-                            fontWeight: FontWeight.w800,
-                            fontSize: 12,
-                            color: CyberColors.grey,
-                          ),
-                        )
-                      ],
+                      children: getTagsWidget(tags),
                     ),
                   ),
-                  Container(
-                    child: Text(
-                      title,
-                      style: const TextStyle(
-                        fontWeight: FontWeight.w800,
-                        fontSize: 23,
-                        color: CyberColors.darkBlue,
-                      ),
+                  Text(
+                    title,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w800,
+                      fontSize: 23,
+                      color: CyberColors.darkBlue,
                     ),
                   ),
                   Container(
@@ -136,5 +116,25 @@ class AcitivitesList extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  List<Widget> getTagsWidget(String tags) {
+    List<String> elems = tags.split("/");
+    List<Widget> children = [];
+
+    for (String elem in elems) {
+      children.add(Text(
+        elem.toUpperCase(),
+        style: const TextStyle(
+          fontWeight: FontWeight.w800,
+          fontSize: 12,
+          color: CyberColors.grey,
+        ),
+      ));
+      children.add(const SizedBox(
+        width: 10,
+      ));
+    }
+    return children;
   }
 }
