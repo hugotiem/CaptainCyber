@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         width: _size.width,
         decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(
@@ -32,25 +32,30 @@ class HomePage extends StatelessWidget {
           ),
           color: Colors.white,
         ),
-        child: SafeArea(
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: childrenBuilder("Training"),
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: childrenBuilder("Checkup"),
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: childrenBuilder("Quiz"),
-                )
-              ],
-            ),
+        clipBehavior: Clip.antiAlias,
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              const SizedBox(
+                height: 10,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: childrenBuilder("Training"),
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: childrenBuilder("Checkup"),
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: childrenBuilder("Quiz"),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+            ],
           ),
         ),
       ),

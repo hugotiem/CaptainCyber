@@ -26,7 +26,9 @@ class AcitivitesList extends StatelessWidget {
         border: Border.all(color: CyberColors.grey.withOpacity(0.2)),
         borderRadius: const BorderRadius.all(Radius.circular(5)),
       ),
-      margin: const EdgeInsets.symmetric(vertical: 10),
+      margin: const EdgeInsets.symmetric(
+        vertical: 10,
+      ),
       child: Row(
         children: <Widget>[
           Expanded(
@@ -57,12 +59,15 @@ class AcitivitesList extends StatelessWidget {
                       children: getTagsWidget(tags),
                     ),
                   ),
-                  Text(
-                    title,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.w800,
-                      fontSize: 23,
-                      color: CyberColors.darkBlue,
+                  Container(
+                    margin: const EdgeInsets.only(top: 5),
+                    child: Text(
+                      title,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.w800,
+                        fontSize: 23,
+                        color: CyberColors.darkBlue,
+                      ),
                     ),
                   ),
                   Container(
@@ -86,7 +91,10 @@ class AcitivitesList extends StatelessWidget {
                         ),
                         Text(
                           pts + "pts",
-                          style: const TextStyle(color: CyberColors.yellow),
+                          style: const TextStyle(
+                            color: CyberColors.yellow,
+                            fontWeight: FontWeight.w800,
+                          ),
                         ),
                       ],
                     ),
@@ -95,7 +103,13 @@ class AcitivitesList extends StatelessWidget {
                     children: <Widget>[
                       Expanded(
                         flex: 1,
-                        child: Text(modulesCompleted),
+                        child: Text(
+                          modulesCompleted,
+                          style: const TextStyle(
+                            color: CyberColors.blue,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
                       ),
                       Expanded(
                         flex: 6,
@@ -104,7 +118,7 @@ class AcitivitesList extends StatelessWidget {
                           percent: percent,
                           progressColor: percent == 1
                               ? CyberColors.green
-                              : CyberColors.darkBlue,
+                              : CyberColors.blue,
                           backgroundColor: CyberColors.whiteGrey,
                         ),
                       ),
@@ -128,7 +142,6 @@ class AcitivitesList extends StatelessWidget {
         elem.toUpperCase(),
         style: const TextStyle(
           fontWeight: FontWeight.w800,
-          fontSize: 12,
           color: CyberColors.grey,
         ),
       ));
