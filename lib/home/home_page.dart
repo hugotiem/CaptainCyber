@@ -20,6 +20,7 @@ class HomePage extends StatelessWidget {
         title: Text(title.toUpperCase()),
         backgroundColor: Colors.transparent,
         elevation: 0,
+        centerTitle: true,
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
@@ -31,23 +32,25 @@ class HomePage extends StatelessWidget {
           ),
           color: Colors.white,
         ),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: childrenBuilder("Training"),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: childrenBuilder("Checkup"),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: childrenBuilder("Quiz"),
-              )
-            ],
+        child: SafeArea(
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: childrenBuilder("Training"),
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: childrenBuilder("Checkup"),
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: childrenBuilder("Quiz"),
+                )
+              ],
+            ),
           ),
         ),
       ),
