@@ -35,10 +35,6 @@ class AcitivitesList extends StatelessWidget {
             flex: 1,
             child: Container(
               margin: const EdgeInsets.symmetric(horizontal: 10),
-              decoration: BoxDecoration(
-                border: Border.all(color: CyberColors.grey.withOpacity(0.2)),
-                borderRadius: const BorderRadius.all(Radius.circular(5)),
-              ),
               child: Image(
                 fit: BoxFit.contain,
                 image: AssetImage(img),
