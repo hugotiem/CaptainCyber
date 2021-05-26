@@ -7,7 +7,7 @@ class Data {
       "tags": "Identification/Digital identity",
       'points': 35,
       "duration": "15min",
-      "modulesCompleted": 2 / 3,
+      "modulesCompleted": "2/3",
     },
     {
       "title": "Protect personal data",
@@ -16,7 +16,7 @@ class Data {
       "tags": "Protection/Gdpr",
       'points': 35,
       "duration": "15min",
-      "modulesCompleted": 1 / 4,
+      "modulesCompleted": "1/4",
     },
     {
       "title": "Harden your social profiles",
@@ -25,7 +25,7 @@ class Data {
       "tags": "Social network / Privacy",
       'points': 10,
       "duration": "5min",
-      "modulesCompleted": 0 / 3,
+      "modulesCompleted": "0/3",
     },
     {
       "title": "Do your part against ransomwares",
@@ -34,7 +34,7 @@ class Data {
       "tags": "Social engineering / Phishing / Vishing",
       'points': 10,
       "duration": "5min",
-      "modulesCompleted": 4 / 4,
+      "modulesCompleted": "4/4",
     },
     {
       "title": "Software updates and installs at home",
@@ -43,7 +43,7 @@ class Data {
       "tags": "Update / Software",
       'points': 15,
       "duration": "10min",
-      "modulesCompleted": 2 / 3,
+      "modulesCompleted": "2/3",
     },
     {
       "title": "Protect your browser at home",
@@ -52,7 +52,7 @@ class Data {
       "tags": "Protection / Update",
       'points': 15,
       "duration": "10min",
-      "modulesCompleted": 1 / 4,
+      "modulesCompleted": "1/4",
     },
   ];
 

@@ -1,5 +1,6 @@
 import 'package:captain_cyber/constants/cyber_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 
 class AcitivitesList extends StatelessWidget {
   const AcitivitesList({Key? key, required this.data}) : super(key: key);
@@ -8,35 +9,44 @@ class AcitivitesList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // print(data["tags"].toString().split("/")[0]);
+    // data
+    String tags = data["tags"].toString();
+    String img = data["image"].toString();
+    String title = data["title"].toString();
+    String duration = data["duration"].toString();
+    String pts = data["points"].toString();
+    String modulesCompleted = data["modulesCompleted"].toString();
+
+    double percent =
+        double.parse(modulesCompleted[0]) / double.parse(modulesCompleted[2]);
+
     return Container(
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         border: Border.all(color: CyberColors.grey.withOpacity(0.2)),
         borderRadius: const BorderRadius.all(Radius.circular(5)),
       ),
-      padding: const EdgeInsets.all(10),
       margin: const EdgeInsets.symmetric(vertical: 10),
       child: Row(
         children: <Widget>[
           Expanded(
             flex: 1,
             child: Container(
-              height: 120,
-              width: 120,
+              margin: const EdgeInsets.symmetric(horizontal: 10),
               decoration: BoxDecoration(
                 border: Border.all(color: CyberColors.grey.withOpacity(0.2)),
                 borderRadius: const BorderRadius.all(Radius.circular(5)),
               ),
               child: Image(
                 fit: BoxFit.contain,
-                image: AssetImage(data["image"].toString()),
+                image: AssetImage(img),
               ),
             ),
           ),
           Expanded(
             flex: 2,
             child: Container(
+              width: double.infinity,
               margin: const EdgeInsets.all(10),
               child: Column(
                 children: <Widget>[
@@ -44,7 +54,7 @@ class AcitivitesList extends StatelessWidget {
                     child: Row(
                       children: <Widget>[
                         Text(
-                          data["tags"].toString().split("/")[0].toUpperCase(),
+                          tags.split("/")[0].toUpperCase(),
                           style: const TextStyle(
                             fontWeight: FontWeight.w800,
                             fontSize: 12,
@@ -55,7 +65,7 @@ class AcitivitesList extends StatelessWidget {
                           width: 20,
                         ),
                         Text(
-                          data["tags"].toString().split("/")[1].toUpperCase(),
+                          tags.split("/")[1].toUpperCase(),
                           style: const TextStyle(
                             fontWeight: FontWeight.w800,
                             fontSize: 12,
@@ -67,15 +77,16 @@ class AcitivitesList extends StatelessWidget {
                   ),
                   Container(
                     child: Text(
-                      data["title"].toString(),
+                      title,
                       style: const TextStyle(
                         fontWeight: FontWeight.w800,
-                        fontSize: 20,
+                        fontSize: 23,
                         color: CyberColors.darkBlue,
                       ),
                     ),
                   ),
                   Container(
+                    margin: const EdgeInsets.symmetric(vertical: 5),
                     child: Row(
                       children: <Widget>[
                         const Icon(
@@ -83,7 +94,7 @@ class AcitivitesList extends StatelessWidget {
                           color: CyberColors.grey,
                         ),
                         Text(
-                          data["duration"].toString(),
+                          duration,
                           style: const TextStyle(color: CyberColors.grey),
                         ),
                         const SizedBox(
@@ -94,11 +105,29 @@ class AcitivitesList extends StatelessWidget {
                           color: CyberColors.yellow,
                         ),
                         Text(
-                          data["points"].toString() + "pts",
+                          pts + "pts",
                           style: const TextStyle(color: CyberColors.yellow),
                         ),
                       ],
                     ),
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Expanded(
+                        flex: 1,
+                        child: Text(modulesCompleted),
+                      ),
+                      Expanded(
+                          flex: 6,
+                          child: LinearPercentIndicator(
+                            lineHeight: 6,
+                            percent: percent,
+                            progressColor: percent == 1
+                                ? CyberColors.green
+                                : CyberColors.darkBlue,
+                            backgroundColor: CyberColors.whiteGrey,
+                          )),
+                    ],
                   ),
                 ],
               ),
